@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/k8s-minikube-ssl-zcorp-api.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/k8s-minikube-ssl-zcorp-api.iml" group="zcorp-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" group="zcorp-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" group="zcorp-api" />
+    </modules>
+  </component>
+</project>

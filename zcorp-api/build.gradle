@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
+group 'com.zcorp.api'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    classifier = 'fat'
+    classifier = null
+    version = null
+    manifest {
+        attributes 'Main-Class': 'io.vertx.core.Launcher'
+        attributes 'Main-Verticle': 'com.zcorp.api.ApiVerticle'
+    }
+    mergeServiceFiles {
+        include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
+    }
+}
+
+task stage(dependsOn: ["clean", "shadowJar"])
+
+dependencies {
+
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'org.jdbi:jdbi:2.78'
+
+    compile 'com.zaxxer:HikariCP:2.6.0'
+    compile 'mysql:mysql-connector-java:6.0.5'
+    compile 'org.flywaydb:flyway-core:4.1.1'
+
+    compile 'io.vertx:vertx-core:3.3.3'
+    compile 'io.vertx:vertx-web:3.3.3'
+    compile 'io.vertx:vertx-rx-java:3.3.3'
+}

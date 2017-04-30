@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zcorp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zcorp
+        tier: api
+    spec:
+      containers:
+      - name: api
+        image: zcorp-api:v18
+        env:
+        - name: MYSQL_PASSWORD
+          value: zcorp123
+        resources:
+          limits:
+            cpu: 100m
+            memory: 512Mi
+        ports:
+          - name: http
+            containerPort: 3000

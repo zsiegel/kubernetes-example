@@ -1,4 +1,6 @@
-FROM mhart/alpine-node:7
-EXPOSE 8080
-COPY server.js .
-CMD node server.js
+FROM openjdk:8-jre
+
+EXPOSE 8081
+
+COPY /build/libs/zcorp-api.jar zcorp-api.jar
+CMD ["java", "-Xmx512m", "-jar", "zcorp-api.jar"]

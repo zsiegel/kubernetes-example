@@ -1,23 +1,23 @@
 # Kubernetes Example
 
 We will deploy the following
-- A Java8 webapp that uses the Vert.x framework
+- A Java 8 webapp that uses the Vert.x framework
 - A container that runs MySQL with a persistent volume
 - A kubernetes cluster that uses secrets, volumes, deployments, and services
 
 ## Walkthrough
 
-Build the fat jar that can be deployed to kubernetes
+Build the fat jar that will be copied into a docker container
 ```
 gradle stage
 ```
 
-Build the docker container into your local instance
+Build the docker container
 ```
 docker build -t zcorp-api:v1 zcorp-api/
 ```
 
-Launch Minikube (a local kubernetes cluster)
+Launch [Minikube](https://github.com/kubernetes/minikube) (a local kubernetes cluster)
 ```
 minikube start --vm-driver=xhyve
 ```

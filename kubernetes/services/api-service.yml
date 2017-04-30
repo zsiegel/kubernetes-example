@@ -5,6 +5,8 @@ metadata:
 spec:
   type: NodePort
   selector:
+    # determines where the traffic should go
+    # these labels match what is in our api-deployment.yml
     app: zcorp
     tier: api
   ports:

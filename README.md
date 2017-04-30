@@ -4,10 +4,16 @@
 - MySQL
 - Vert.x
 
+- Kubernetes volumes, secrets, services, deployments
+
+Build jar
+```
+gradle stage
+```
 
 Build docker container
 ```
-docker build -t zcorp-api:v6 zcorp-api/
+docker build -t zcorp-api:v1 zcorp-api/
 ```
 Launch Minikube
 ```
@@ -26,7 +32,7 @@ minikube addons enable ingress
 
 Add secrets to cluster
 ```shell
-kubectl apply secret -f kubernetes/secrets/
+kubectl apply -f kubernetes/secrets/
 ```
 
 Add storage to cluster

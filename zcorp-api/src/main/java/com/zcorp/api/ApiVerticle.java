@@ -1,7 +1,9 @@
 package com.zcorp.api;
 
 import com.zaxxer.hikari.HikariDataSource;
+import io.vertx.core.Context;
 import io.vertx.core.Future;
+import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
 import io.vertx.rxjava.core.AbstractVerticle;
@@ -17,17 +19,16 @@ import javax.sql.DataSource;
 public class ApiVerticle extends AbstractVerticle {
 
     private DataSource dataSource;
-
     private VertxScheduler scheduler;
 
     @Override
     public void start(Future<Void> startFuture) throws Exception {
+
+        this.scheduler = new VertxScheduler(RxHelper.blockingScheduler(vertx),
+                                            RxHelper.scheduler(vertx));
+
         Observable.create(subscriber -> {
 
-            this.scheduler = new VertxScheduler(RxHelper.blockingScheduler(vertx),
-                                                RxHelper.scheduler(vertx));
-
-            System.out.println("Initializing database...");
             String jdbcUrl = JdbcUrl.mysql(System.getenv("MYSQL_HOST"),
                                            Integer.parseInt(System.getenv("MYSQL_PORT")),
                                            System.getenv("DATABASE_NAME"),

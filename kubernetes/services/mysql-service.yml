@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: mysql
 spec:
+  selector:
+    # determines where the traffic should go
+    # these labels match what is in our mysql-deployment.yml
+  app: mysql
   ports:
     - name: mysql
       port: 3306
-  selector:
-    app: mysql
   clusterIP: None

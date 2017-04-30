@@ -12,6 +12,10 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+.gradle/
+build/
+.vertx/
+
 # Package Files #
 *.jar
 *.war
@@ -56,9 +60,6 @@ cmake-build-debug/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
-.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml

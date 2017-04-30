@@ -3,16 +3,17 @@ kind: Deployment
 metadata:
   name: zcorp
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
+        # used for routing traffic to our instance
         app: zcorp
         tier: api
     spec:
       containers:
       - name: api
-        image: zcorp-api:v18
+        image: zcorp-api:v1
         env:
         - name: API_ENV
           value: "k8-zcorp"
@@ -40,5 +41,6 @@ spec:
             cpu: 100m
             memory: 512Mi
         ports:
+          # by naming this port http we can reference it elsewhere
           - name: http
             containerPort: 3000

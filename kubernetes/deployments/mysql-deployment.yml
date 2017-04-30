@@ -4,6 +4,8 @@ metadata:
   name: mysql
 spec:
   strategy:
+  # this prevents rolling updates since our volume
+  # can only be attached to one instance at a time
     type: Recreate
   template:
     metadata:

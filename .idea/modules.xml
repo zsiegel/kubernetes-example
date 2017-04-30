@@ -4,7 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/k8s-minikube-ssl-zcorp-api.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/k8s-minikube-ssl-zcorp-api.iml" group="zcorp-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api.iml" group="zcorp-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" group="zcorp-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_main.iml" group="zcorp-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" group="zcorp-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zcorp-api/zcorp-api_test.iml" group="zcorp-api" />
     </modules>
   </component>

@@ -26,11 +26,10 @@ minikube addons enable ingress
 
 Add secrets to cluster
 ```shell
-echo -n "zcorp123" | base64
-kubectl create secret generic mysql-password 
+kubectl apply secret -f kubernetes/secrets/
 ```
 
-Add data storage to cluster
+Add storage to cluster
 ```shell
 kubectl apply -f kubernetes/volumes/
 ```

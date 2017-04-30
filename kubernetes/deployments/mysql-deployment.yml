@@ -19,13 +19,25 @@ spec:
             memory: 512Mi
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: password
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: root-password
         - name: MYSQL_DATABASE
-          value: zcorp
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: database
         - name: MYSQL_USER
-          value: zcorp-user
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-user
         - name: MYSQL_PASSWORD
-          value: zcorp123
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-password
         ports:
         - name: mysql
           containerPort: 3306

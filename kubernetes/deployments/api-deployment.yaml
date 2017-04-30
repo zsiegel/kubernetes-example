@@ -14,8 +14,27 @@ spec:
       - name: api
         image: zcorp-api:v18
         env:
+        - name: API_ENV
+          value: "k8-zcorp"
+        - name: MYSQL_HOST
+          value: mysql
+        - name: MYSQL_PORT
+          value: "3306"
+        - name: DATABASE_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: database
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-user
         - name: MYSQL_PASSWORD
-          value: zcorp123
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-password
         resources:
           limits:
             cpu: 100m

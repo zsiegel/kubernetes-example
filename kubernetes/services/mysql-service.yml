@@ -6,7 +6,7 @@ spec:
   selector:
     # determines where the traffic should go
     # these labels match what is in our mysql-deployment.yml
-  app: mysql
+    app: mysql
   ports:
     - name: mysql
       port: 3306

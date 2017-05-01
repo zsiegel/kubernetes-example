@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: zcorp
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     # determines where the traffic should go
     # these labels match what is in our api-deployment.yml

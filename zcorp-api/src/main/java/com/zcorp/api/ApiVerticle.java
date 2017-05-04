@@ -1,9 +1,7 @@
 package com.zcorp.api;
 
 import com.zaxxer.hikari.HikariDataSource;
-import io.vertx.core.Context;
 import io.vertx.core.Future;
-import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.json.JsonObject;
 import io.vertx.rxjava.core.AbstractVerticle;
@@ -19,6 +17,7 @@ import javax.sql.DataSource;
 public class ApiVerticle extends AbstractVerticle {
 
     private DataSource dataSource;
+
     private VertxScheduler scheduler;
 
     @Override
